@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - AstroShop</title>
+    <!-- Bootstrap 5.3 с CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <style>
+        .product-card {
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">AstroShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/catalog">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/category">Категории</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container my-4">
+        <!-- Хлебные крошки -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                <li class="breadcrumb-item active">Каталог</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <!-- Фильтры -->
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Фильтры</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Цена -->
+                        <div class="mb-3">
+                            <label for="priceRange" class="form-label">Цена, руб.</label>
+                            <input type="range" class="form-range" id="priceRange" min="0" max="100000" step="1000">
+                            <div class="d-flex justify-content-between">
+                                <span>0</span>
+                                <span>100 000</span>
+                            </div>
+                        </div>
+
+                        <!-- Категории -->
+                        <div class="mb-3">
+                            <h6>Категории</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat1">
+                                <label class="form-check-label" for="cat1">Электроника</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat2">
+                                <label class="form-check-label" for="cat2">Одежда</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat3">
+                                <label class="form-check-label" for="cat3">Книги</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat4">
+                                <label class="form-check-label" for="cat4">Спорт</label>
+                            </div>
+                        </div>
+
+                        <!-- Бренды -->
+                        <div class="mb-3">
+                            <h6>Бренды</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="brand1">
+                                <label class="form-check-label" for="brand1">Brand A</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="brand2">
+                                <label class="form-check-label" for="brand2">Brand B</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="brand3">
+                                <label class="form-check-label" for="brand3">Brand C</label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary w-100">Применить фильтры</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Товары -->
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>Каталог товаров</h1>
+                    <div>
+                        <select class="form-select w-auto d-inline-block">
+                            <option selected>Сортировка</option>
+                            <option value="1">По цене (возрастание)</option>
+                            <option value="2">По цене (убывание)</option>
+                            <option value="3">По популярности</option>
+                            <option value="4">По новизне</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Сетка товаров -->
+                <div class="row">
+                    <!-- Товар 1 -->
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Смартфон XYZ</h5>
+                                <p class="card-text">Мощный смартфон с камерой 48 МП, 128 ГБ памяти.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary">24 999 ₽</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <button class="btn btn-primary w-100 mt-2">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар 2">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Ноутбук Pro</h5>
+                                <p class="card-text">Игровой ноутбук с процессором i7 и видеокартой RTX 3060.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary">89 999 ₽</span>
+                                        <span class="badge bg-warning">Мало</span>
+                                    </div>
+                                    <button class="btn btn-primary w-100 mt-2">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар 3">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Книга "Программирование"</h5>
+                                <p class="card-text">Полное руководство по Python для начинающих.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary">1 499 ₽</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <button class="btn btn-primary w-100 mt-2">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар 4">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Футболка классическая</h5>
+                                <p class="card-text">Хлопковая футболка, все размеры доступны.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary">999 ₽</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <button class="btn btn-primary w-100 mt-2">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар 5">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Наушники Wireless</h5>
+                                <p class="card-text">Беспроводные наушники с шумоподавлением.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary">7 499 ₽</span>
+                                        <span class="badge bg-success">В наличии</span>
+                                    </div>
+                                    <button class="btn btn-primary w-100 mt-2">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card product-card h-100">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар 6">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Часы Smart Watch</h5>
+                                <p class="card-text">Умные часы с функцией отслеживания здоровья.</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="h5 text-primary">12 999 ₽</span>
+                                        <span class="badge bg-danger">Нет в наличии</span>
+                                    </div>
+                                    <button class="btn btn-secondary w-100 mt-2" disabled>Нет в наличии</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Пагинация -->
+                <nav aria-label="Навигация по страницам">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Назад</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Вперед</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="text-center">
+                <p>&copy; 2026 AstroShop. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

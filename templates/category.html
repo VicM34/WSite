@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категория - AstroShop</title>
+    <!-- Bootstrap 5.3 с CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <style>
+        .category-banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://via.placeholder.com/1200x300');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        .subcategory-card {
+            transition: all 0.3s;
+        }
+        .subcategory-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">AstroShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/catalog">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/category">Категории</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Баннер категории -->
+    <div class="category-banner">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3">Электроника</h1>
+            <p class="lead">Современные гаджеты и техника для дома, офиса и развлечений</p>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Хлебные крошки -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                <li class="breadcrumb-item"><a href="/catalog">Каталог</a></li>
+                <li class="breadcrumb-item active">Электроника</li>
+            </ol>
+        </nav>
+
+        <!-- Подкатегории -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Подкатегории</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card subcategory-card text-center h-100">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div style="width: 60px; height: 60px; background-color: #e3f2fd; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                        <span style="font-size: 24px;">📱</span>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">Смартфоны</h5>
+                                <p class="card-text text-muted">245 товаров</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card subcategory-card text-center h-100">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div style="width: 60px; height: 60px; background-color: #f3e5f5; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                        <span style="font-size: 24px;">💻</span>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">Ноутбуки</h5>
+                                <p class="card-text text-muted">89 товаров</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card subcategory-card text-center h-100">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div style="width: 60px; height: 60px; background-color: #e8f5e9; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                        <span style="font-size: 24px;">🎧</span>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">Аудио</h5>
+                                <p class="card-text text-muted">156 товаров</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card subcategory-card text-center h-100">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div style="width: 60px; height: 60px; background-color: #fff3e0; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                                        <span style="font-size: 24px;">📺</span>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">ТВ и видео</h5>
+                                <p class="card-text text-muted">78 товаров</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные товары категории -->
+        <section class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Популярные товары</h2>
+                <a href="#" class="btn btn-outline-primary">Смотреть все →</a>
+            </div>
+
+            <div class="row">
+                <!-- Товар 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Скидка 15%</span>
+                        <img src="https://via.placeholder.com/250x200" class="card-img-top" alt="Товар">
+                        <div class="card-body">
+                            <h5 class="card-title">Смартфон Premium</h5>
+                            <p class="card-text text-muted small">Флагманский смартфон 2024 года</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="h5 text-primary">64 999 ₽</span>
+                                    <del class="text-muted small d-block">76 499 ₽</del>
+                                </div>
+                                <button class="btn btn-primary btn-sm">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Товар 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/250x200" class="card-img-top" alt="Товар">
+                        <div class="card-body">
+                            <h5 class="card-title">Ноутбук Ultra</h5>
+                            <p class="card-text text-muted small">Ультрабук для работы и учебы</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">45 999 ₽</span>
+                                <button class="btn btn-primary btn-sm">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Товар 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <span class="badge bg-success position-absolute top-0 start-0 m-2">Хит</span>
+                        <img src="https://via.placeholder.com/250x200" class="card-img-top" alt="Товар">
+                        <div class="card-body">
+                            <h5 class="card-title">Наушники Pro</h5>
+                            <p class="card-text text-muted small">Профессиональные наушники</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">23 999 ₽</span>
+                                <button class="btn btn-primary btn-sm">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Товар 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/250x200" class="card-img-top" alt="Товар">
+                        <div class="card-body">
+                            <h5 class="card-title">Планшет Max</h5>
+                            <p class="card-text text-muted small">Планшет с большим экраном</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary">32 499 ₽</span>
+                                <button class="btn btn-primary btn-sm">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Описание категории -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">О категории "Электроника"</h3>
+                    <p class="card-text">
+                        В нашем магазине представлен широкий ассортимент электроники от ведущих мировых брендов.
+                        Мы тщательно отбираем каждый товар, чтобы предложить нашим клиентам только лучшее.
+                    </p>
+                    <p class="card-text">
+                        Все товары проходят предпродажную проверку и имеют официальную гарантию производителя.
+                        Мы осуществляем быструю доставку по всей России и предоставляем техническую поддержку.
+                    </p>
+                    <ul>
+                        <li>Официальная гарантия на все товары</li>
+                        <li>Бесплатная доставка при заказе от 5000 ₽</li>
+                        <li>Возврат в течение 14 дней</li>
+                        <li>Кредит и рассрочка 0%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Частые вопросы</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Какая гарантия на электронику?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            На всю электронику предоставляется официальная гарантия производителя от 1 до 3 лет.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Есть ли доставка в регионы?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Да, мы осуществляем доставку по всей России через проверенных транспортных компаний.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Категории</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Электроника</a></li>
+                        <li><a href="#" class="text-white">Одежда</a></li>
+                        <li><a href="#" class="text-white">Книги</a></li>
+                        <li><a href="#" class="text-white">Спорт</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Помощь</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/contacts" class="text-white">Контакты</a></li>
+                        <li><a href="#" class="text-white">Доставка</a></li>
+                        <li><a href="#" class="text-white">Оплата</a></li>
+                        <li><a href="#" class="text-white">Гарантия</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center">
+                <p>&copy; 2026 AstroShop. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
